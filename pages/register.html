@@ -1,0 +1,118 @@
+
+	<!-- ================ start banner area ================= -->
+	<section class="blog-banner-area" id="category">
+		<div class="container h-100">
+			<div class="blog-banner">
+				<div class="text-center">
+					<h1>Регистрация</h1>
+					<nav aria-label="breadcrumb" class="banner-breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="#">Главная</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Регистрация</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ================ end banner area ================= -->
+
+	<!--================Login Box Area =================-->
+	<section class="login_box_area section-margin">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="login_box_img">
+						<div class="hover">
+							<h4>Вы имеете зарегистрированный аккаунт?</h4>
+							<p>Получите преимущества премиум аккаунта</p>
+							<a class="button button-account" href="/login">Войти</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="login_form_inner register_form_inner">
+						<h3>Зарегистрироваться</h3>
+						<form class="row login_form" onsubmit="sendForm(this); return false;">
+							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" required name="name" placeholder="Ваше имя"
+									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ваше имя'">
+							</div>
+
+							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" required name="lastname" placeholder="Ваша фамилия" onfocus="this.placeholder = ''"
+									onblur="this.placeholder = 'Ваша фамилия'">
+							</div>
+
+							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" required name="email" placeholder="Email"
+									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
+							</div>
+							<div class="col-md-12 form-group">
+								<input type="password" class="form-control" required name="pass" placeholder="Пароль" 
+									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Пароль'">
+							</div>
+							<!-- <div class="col-md-12 form-group">
+								<input type="text" class="form-control" id="confirmPassword" name="confirmPassword"
+									placeholder="Confirm Password" onfocus="this.placeholder = ''"
+									onblur="this.placeholder = 'Confirm Password'">
+							</div> -->
+							<div class="col-md-12 form-group">
+								<div class="creat_account">
+									<input type="checkbox" id="f-option2">
+									<label for="f-option2">Согласие на обработку персональных данных</label>
+								</div>
+							</div>
+							<p id="info" style="color:red"></p>
+							<div class="col-md-12 form-group">
+								<button type="submit" class="button button-register w-100">Зарегистрироваться</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Login Box Area =================-->
+
+	<!-- Modal start -->
+	<div class="modal fade" id="modalRegister" data-backdrop="static" data-keyboard="false" tabindex="-1"
+		aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="staticBackdropLabel">Регистрация прошла успешно</h5>
+				</div>
+				<div class="modal-body">вы будете направлены на страницу</div>
+				<div class="modal-footer">Авторизации через 3 секунды</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal end -->
+
+	<script>
+
+		async function sendForm(form) {
+				let formData = new FormData(form);
+
+				let response = await fetch("addUser", {
+					method: "POST",
+					body: formData,
+				});
+
+				let res = await response.json();
+
+				if (res.result == "success") {
+					$("#modalRegister").modal("show");
+					setTimeout(() => {
+						location.href = "login";
+					}, 3000);
+				} else if (res.result == "exist") {
+					info.innerText = "Такой пользователь уже есть!";
+				}
+			}
+	</script>
+
+
+
