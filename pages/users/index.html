@@ -1,1 +1,291 @@
+<!doctype html>
+<html lang="ru">
 
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>Личный кабинет</title>
+<style>
+.nav-pills .nav-link.active{
+    background-color:#daeb38 ;
+}
+
+</style>
+        
+</head>
+
+<body>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-3">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                
+                <a class="nav-link" id="profileTab" data-toggle="pill" href="#v-pills-profile" role="tab"
+                    aria-controls="v-pills-profile" aria-selected="false">Профиль</a>
+
+                <a class="nav-link" id="messagesTab" data-toggle="pill" href="#v-pills-messages" role="tab"
+                    aria-controls="v-pills-messages" aria-selected="false">Сообщения</a>
+
+                <a class="nav-link" id="settingsTab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                    aria-controls="v-pills-settings" aria-selected="false">Настройки</a>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="tab-content" id="v-pills-tabContent">
+                
+                
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img class="img-fluid" src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436178.jpg?&w=500" alt="">
+                        </div>
+                        <div class="col-md-9">
+
+                            <h1 class="text-center my-3">Профиль пользователя</h1>
+                            <h2>
+                                <span>Фамилия | Имя </span>
+                                <span id="userName"></span>
+                            </h2>
+                            <h3>e-mail: 
+                                <span id="userMail"></span>
+                            </h3>
+                            <p>ID: 
+                                <span id="userId"></span>
+                            </p>
+                            <p>О себе: 
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam a quos ut voluptatem fugit incidunt, 
+                                voluptates ea, maxime enim quibusdam nesciunt ipsa, reiciendis quasi impedit tenetur similique magnam 
+                                dolores necessitatibus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                    <div class="row">
+                        <div class="col-md-5">
+
+                            <div class="row mb-3 border-bottom">
+                                <div class="col-12">
+                                    <div class="media">
+                                        <img class="img-fluid mr-3" src="../../img/r7.jpg" alt="avatar">
+                                        <div class="media-body">
+                                            <h5>Мурзик</h5>
+                                            <p>я сплю .не пиши </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3 border-bottom">
+                                <div class="col-12">
+                                    <div class="media">
+                                        <img class="img-fluid mr-3" src="../../img/r4.jpg" alt="avatar">
+                                        <div class="media-body">
+                                            <h5>Елена Столы </h5>
+                                            <p>Купи столы </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3 border-bottom">
+                                <div class="col-12">
+                                    <div class="media">
+                                        <img class="img-fluid mr-3" src="../../img/r12.jpg" alt="avatar">
+                                        <div class="media-body">
+                                            <h5>Виктор Петрович</h5>
+                                            <p>Дедлайн через 3...2...1...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3 border-bottom">
+                                <div class="col-12">
+                                    <div class="media">
+                                        <img class="img-fluid mr-3" src="../../img/r8.jpg" alt="avatar">
+                                        <div class="media-body">
+                                            <h5>Вячеслав Электрик</h5>
+                                            <p>прошу оплатить до 31 июля</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-7">
+                            <div class="row pl-3">
+                                <div class="col-12 border">
+
+                                        <div class="row mb-3">
+
+                                            <div class="col-4">
+                                                <img class="img-fluid mr-3" src="../../img/r12.jpg" alt="avatar">
+                                            </div>
+                                            <div class="col-8">
+                                                <h5>Виктор Петрович</h5>
+                                                <p>Дедлайн через 3...2...1...</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                        
+                                            <div class="col-4">
+                                                <img class="img-fluid mr-3" src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436178.jpg?&w=70" alt="avatar">
+                                            </div>
+                                            <div class="col-8">
+                                                <h5>Чел</h5>
+                                                <p>я в отпуске!!!!111</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mt-5">
+                                            <form action="" class="col-12 pl-0 pr-0">
+                                                <textarea name="" id="" class="form-control" placeholder="текст сообщения" rows="3"></textarea>
+                                                <button class="btn btn-block btn-danger mt-5">Отправить</button>
+                                            </form>
+
+                                        </div>
+                                    
+                                </div>
+                            </div>
+<!-- Табл start -->
+                            <div class="row mt-5">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Имя</th>
+                                            <th scope="col">Фамилия</th>
+                                            <th scope="col">E-mail</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="userListTable">
+                                        <!-- Данные из базы данных -->
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+<!-- Табл end -->
+                        </div>
+                    </div>
+                </div>
+                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                        <div class="d-flex pl-5 pr-5 mt-5 flex-wrap">
+                            <div class="btn btn-block btn-info">выкл</div>
+                            <div class="btn btn-block btn-info">вкл</div>
+                            <div class="btn btn-block btn-info">удалить</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                        
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+crossorigin="anonymous"></script>
+
+
+
+<script>
+    let pathname = location.pathname.split("/")[2];
+    // let user;
+
+
+    async function getUser() {
+        let response = await fetch("/getUser");
+
+        return await response.json();
+    }
+
+    async function getUsers() {
+            let response = await fetch("/getUsers");
+
+            return await response.json();
+        }
+
+
+
+    addEventListener("popstate", () => {
+        let pathPopstate = location.pathname.split("/")[2];
+        
+        if (pathPopstate == "profile") {
+            $("#profileTab").tab("show");
+        } else if (pathPopstate == "messages") {
+            $("#messagesTab").tab("show");
+        } else if (pathPopstate == "settings") {
+            $("#settingsTab").tab("show");
+        }
+    })
+
+
+
+    if (pathname == "profile") {
+            getUser().then((user) => {
+                userName.innerText = `${user.lastname} ${user.name}`;
+                userMail.innerText = `${user.email}`;
+                userId.innerText = `${user.id}`;
+                console.log(user);
+            });
+
+        $("#v-pills-profile").tab("show");
+    } else if(pathname == "messages") {
+        getUsers().then((users) => {
+for (let i = 0; i < users.length; i++) {
+    userListTable.innerHTML += `
+    <tr>
+        <th scope="row">${users[i].id}</th>
+        <td>${users[i].name}</td>
+        <td>${users[i].lastname}</td>
+        <td>${users[i].email}</td>
+    </tr>
+    `;
+}
+console.log(users);
+        });
+
+
+        $("#v-pills-messages").tab("show");
+    } else if (pathname == "settings") {
+        $("#v-pills-settings").tab("show");
+    } else {
+        location.href = location.protocol + "//" + location.host; // cстранное
+    }
+
+document.getElementById(pathname + "Tab").classList.add("active"); //! Cannot read properties of null (reading 'classList')
+let navLinks = document.querySelectorAll(".nav-link");
+
+for (let i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener("click", () => {
+        let page = navLinks[i].getAttribute("aria-control").split("v-pills-")[1];
+        console.log(page);
+        history.pushState('', '', page);
+    });
+}
+
+</script>
+</body>
+
+</html>
